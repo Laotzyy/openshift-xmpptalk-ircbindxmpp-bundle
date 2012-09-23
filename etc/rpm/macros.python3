@@ -1,0 +1,14 @@
+%py3_compile(O) \
+find %1 -name '*.pyc' -exec rm -f {} ";"\
+python3 -c "import sys, os, compileall; br='%{buildroot}'; compileall.compile_dir(sys.argv[1], ddir=br and (sys.argv[1][len(os.path.abspath(br)):]+'/') or None)" %1\
+%{-O:\
+find %1 -name '*.pyo' -exec rm -f {} ";"\
+python3 -O -c "import sys, os, compileall; br='%{buildroot}'; compileall.compile_dir(sys.argv[1], ddir=br and (sys.argv[1][len(os.path.abspath(br)):]+'/') or None)" %1\
+}
+%py3_ver 3.2
+%python3_sitelib /usr/lib/python3.2/site-packages
+%py3_soflags cpython-32mu
+%py3_incdir /home/abuild/rpmbuild/BUILD/Python-3.2.3/Include
+%py3_prefix /usr
+%python3_sitearch /usr/lib64/python3.2/site-packages
+%py3_abiflags mu

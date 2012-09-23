@@ -16,7 +16,6 @@ The Build Environment emulates the OpenShift environment which is a RedHat Linux
 * mongodb 2.2.0
 
 TODO:
-* Python 3.2.3 (It was created on OBS, but admins seems to upgrade python 2.6 on RHEL, so no result yet)
 * mongokit
 * xmpptalk
 * ircbindxmpp
@@ -24,11 +23,11 @@ TODO:
 
 # Usage 
 
-git clone this
-rm -rf *.rpm
-copy the rest to your OpenShift Git.
-setup (to be detailed, I have a half-done blog post.)
-git commit 
-git push
+* git clone this
+* rm -rf *.rpm
+* copy the rest to your OpenShift Git.
+* setup (to be detailed, I have a half-done blog post.)
+* git commit 
+* git push
 
 Done!
