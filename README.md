@@ -22,7 +22,7 @@ A bundle used for "Do-It-Yoursef" on OpenShift.redhat.com, which provides the ab
 * cd `$OPENSHIFT_DATA_DIR`
 * git clone this
 * `cd` into `openshift-xmpptalk-ircbindxmpp-bundle`
-* `./setup.sh`
+* `./env.sh`
 * modify the config in `lib/python3.3/site-packages/ircbindxmpp` and `lib/python3.3/site-packages/xmpptalk
 * run `ircbindxmpp` and `dbmain.py` in those directories.
 
